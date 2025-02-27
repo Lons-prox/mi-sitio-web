@@ -1,0 +1,8 @@
+tu-sitio/
+├── fase1.html
+├── fase2.html
+├── fase3.html
+├── fase4.html
+└── assets/
+    ├── style.css (opcional)
+    └── script.js (opcional)

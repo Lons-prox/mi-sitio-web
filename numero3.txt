@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fase 2 - Espera 10 segundos</title>
+    <style>
+        /* Mismo estilo que fase1.html */
+    </style>
+</head>
+<body>
+    <h1>Fase 2 de 4</h1>
+    <div class="timer" id="timer">10</div>
+    <p>Por favor, espera 10 segundos para avanzar a la siguiente fase.</p>
+
+    <!-- Anuncio de AdSense -->
+    <div id="ad-slot">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-TU_ID_ADSENSE"
+            crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-TU_ID_ADSENSE"
+            data-ad-slot="TU_SLOT_ADSENSE"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <script>
+        // Temporizador de 10 segundos
+        let timeLeft = 10;
+        const timerElement = document.getElementById('timer');
+
+        const countdown = setInterval(() => {
+            timeLeft--;
+            timerElement.textContent = timeLeft;
+
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                window.location.href = 'fase3.html'; // Redirige a Fase 3
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
